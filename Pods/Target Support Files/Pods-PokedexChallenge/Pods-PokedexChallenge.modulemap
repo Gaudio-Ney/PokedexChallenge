@@ -1,0 +1,6 @@
+framework module Pods_PokedexChallenge {
+  umbrella header "Pods-PokedexChallenge-umbrella.h"
+
+  export *
+  module * { export * }
+}
