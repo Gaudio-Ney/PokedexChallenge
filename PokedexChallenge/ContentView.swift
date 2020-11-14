@@ -10,8 +10,13 @@ import Alamofire
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView{
+            List (pokedex){ pokemon in
+                //Navigation(destination: Text(pokemon.name)){
+                CardPokemon(pokemon: pokemon)
+            //}
+            }
+        }.navigationTitle(Text ("Pokedex"))
     }
 }
 
