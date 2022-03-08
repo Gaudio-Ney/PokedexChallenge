@@ -7,13 +7,22 @@
 
 import SwiftUI
 
-struct Pokemon: Hashable, Codable, Identifiable{
-    var id:Int
-    var name:String
-    var types: [String]
-    var hp:Int
-    var attack:Int
-    var defense:Int
+struct PokemonAPIResponse: Codable {
+    let pokemons: [Pokemon]?
+    
+    enum CodingKeys: String, CodingKey {
+        case pokemons
+    }
+}
+
+struct Pokemon: Codable, Identifiable {
+    let id: Int?
+    let name: String?
+    let types: [String]?
+    let hp: Int?
+    let attack: Int?
+    let defense: Int?
+    let url: String?
     
     enum CodingKeys: String, CodingKey{
         case id
@@ -22,6 +31,7 @@ struct Pokemon: Hashable, Codable, Identifiable{
         case hp = "HP"
         case attack = "Attack"
         case defense = "Defense"
+        case url
     }
     
 }
