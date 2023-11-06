@@ -10,18 +10,29 @@ import Alamofire
 
 struct MainPokedexView: View {
     
-    private let gridItems = [GridItem(.flexible()),
-                             GridItem(.flexible())]
+    // MARK: - Properties
+    @ObservedObject var viewModel: PokedexViewModel = PokedexViewModel()
     
+    // MARK: - View Builder
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: gridItems, spacing: 16) {
-                    ForEach(0..<100) { _ in
-                        PokemonView()
-                    }
+                ForEach(viewModel.pokemons) { pokemon in
+                    PokemonView(pokemonModel: pokemon)
                 }
-            }.navigationTitle("Pokedex")
+            }.navigationTitle(Constants.NavigationTitles.POKEDEX_TITLE)
+        }.onAppear {
+            PokedexAPIService().getPokemons { result in
+                switch result {
+                case .failure(let error):
+                    print("ERROR: \(error.localizedDescription)")
+                case .success(let pokemons):
+                    DispatchQueue.main.async {
+                        viewModel.pokemons = pokemons ?? []
+                    }
+                    print(viewModel.pokemons)
+                }
+            }
         }
     }
     

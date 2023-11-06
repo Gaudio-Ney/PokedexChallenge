@@ -8,35 +8,29 @@
 import SwiftUI
 
 struct PokemonView: View {
+    
+    // MARK: - Properties
+    private(set) var pokemonModel: Pokemon?
+    
     var body: some View {
-        ZStack {
-            VStack(alignment: .leading) {
-                Text("Pikachu")
-                    .font(.headline)
-                    .foregroundColor(Color.white)
+        VStack(alignment: .leading) {
+            Text(pokemonModel?.name ?? "DEFAULT TEXT")
+                .font(.headline)
+                .foregroundColor(Color.white)
+                .padding()
+            HStack {
+                Image(systemName: "circle.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 70)
                     .padding()
-                HStack {
-                    Text("Type: shock")
-                        .font(.subheadline)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.white)
-                        .padding()
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color.white.opacity(0.25))
-                        )
-                        .frame(width: 100, height: 20)
-                    Image(systemName: "circle.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 70, height: 70)
-                        .padding()
-                }
             }
+            .frame(maxWidth: .infinity)
+
         }
         .background(Color.yellow)
         .cornerRadius(13)
-        .shadow(color: Color.yellow, radius: 6, x: 0, y: 0)
+        .shadow(color: Color.black, radius: 6, x: 0, y: 0)
     }
 }
 

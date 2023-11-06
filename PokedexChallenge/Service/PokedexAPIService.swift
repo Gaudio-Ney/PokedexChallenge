@@ -13,7 +13,7 @@ class PokedexAPIService {
     
     static let shared: PokedexAPIService = PokedexAPIService()
     
-    private let pokemonsFirst50URL = Constants.ProductionServer.BASE_URL + "?offset=100&limit=50"
+    private let pokemonsFirst50URL = Constants.ProductionServer.BASE_URL + "pokemon?limit=1000&offset=0"
         
     private enum NetworkError: LocalizedError {
         case urlError
@@ -76,10 +76,14 @@ class PokedexAPIService {
             case .success(let data):
                 do {
                     let response = try JSONDecoder().decode(PokemonAPIResponse.self, from: data)
-                    completion(.success(response.pokemons))
+                    DispatchQueue.main.async {
+                        completion(.success(response.results))
+                    }
                 }
                 catch {
-                    completion(.failure(NetworkError.urlError))
+                    DispatchQueue.main.async {
+                        completion(.failure(NetworkError.urlError))
+                    }
                 }
             case .failure(let error):
                 completion(.failure(error))

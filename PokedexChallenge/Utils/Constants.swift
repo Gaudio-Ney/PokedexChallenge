@@ -10,7 +10,12 @@ import Foundation
 class Constants {
     
     // MARK: - Network Constants
-    struct ProductionServer {
-        static let BASE_URL = " https://pokeapi.co/api/v2"
+    enum ProductionServer {
+        static let BASE_URL = "https://pokeapi.co/api/v2/"
+    }
+    
+    // MARK: - Strings Constants
+    enum NavigationTitles {
+        static let POKEDEX_TITLE = "POKEDEX"
     }
 }

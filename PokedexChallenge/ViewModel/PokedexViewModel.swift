@@ -8,5 +8,8 @@
 import Foundation
 
 class PokedexViewModel: ObservableObject {
-    private static let pokemons: [Pokemon] = [Pokemon]()
+    
+    // MARK: - Properties
+    @Published var pokemons: [Pokemon] = []
+    
 }
