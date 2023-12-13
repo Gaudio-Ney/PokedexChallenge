@@ -19,16 +19,22 @@ struct MainPokedexView: View {
             ScrollView {
                 ForEach(viewModel.pokemons) { pokemon in
                     PokemonView(pokemonModel: pokemon)
+                        .background(Colors.Background.secondaryPurple)
+                        .padding(.horizontal)
                 }
-            }.navigationTitle(Constants.NavigationTitles.POKEDEX_TITLE)
-        }.onAppear {
+            }
+            .background(Colors.Background.secondaryPurple)
+            .navigationTitle(Constants.NavigationTitles.POKEDEX_TITLE)
+        }
+        .onAppear {
             PokedexAPIService().getPokemons { result in
                 switch result {
                 case .failure(let error):
                     print("ERROR: \(error.localizedDescription)")
                 case .success(let pokemons):
                     DispatchQueue.main.async {
-                        viewModel.pokemons = pokemons ?? []
+                        guard let pokemons else { return }
+                        viewModel.pokemons = pokemons
                     }
                     print(viewModel.pokemons)
                 }

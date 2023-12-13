@@ -5,7 +5,7 @@
 //  Created by Gáudio Ney on 14/11/20.
 //
 
-import SwiftUI
+import Foundation
 
 struct PokemonAPIResponse: Codable {
     let results: [Pokemon]

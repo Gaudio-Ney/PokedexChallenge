@@ -16,6 +16,6 @@ class Constants {
     
     // MARK: - Strings Constants
     enum NavigationTitles {
-        static let POKEDEX_TITLE = "POKEDEX"
+        static let POKEDEX_TITLE = "Pokedex"
     }
 }
