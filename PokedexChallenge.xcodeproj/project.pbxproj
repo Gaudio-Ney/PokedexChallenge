@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3024301625607F0E0091AA31 /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024301525607F0E0091AA31 /* PokemonModel.swift */; };
 		302430192560835A0091AA31 /* PokemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302430182560835A0091AA31 /* PokemonView.swift */; };
+		30604AD82C45FC5400457644 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 30604AD72C45FC5400457644 /* Alamofire */; };
+		30604ADA2C45FC5400457644 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 30604AD92C45FC5400457644 /* AlamofireDynamic */; };
 		3060E5D625608C390096B4DA /* pokedex.json in Resources */ = {isa = PBXBuildFile; fileRef = 3060E5D525608C390096B4DA /* pokedex.json */; };
 		30B751AB2B29F2B800C1E566 /* PokemonDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B751AA2B29F2B800C1E566 /* PokemonDetailModel.swift */; };
 		30B751AD2B29FBE000C1E566 /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B751AC2B29FBE000C1E566 /* PokemonDetailView.swift */; };
@@ -21,7 +23,6 @@
 		30D8B52225498E7E0064EBAB /* MainPokedexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D8B52125498E7E0064EBAB /* MainPokedexView.swift */; };
 		30D8B52425498E800064EBAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D8B52325498E800064EBAB /* Assets.xcassets */; };
 		30D8B52725498E800064EBAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D8B52625498E800064EBAB /* Preview Assets.xcassets */; };
-		D0A906A208D96B09699852D0 /* Pods_PokedexChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A599663B8610E808855D3F /* Pods_PokedexChallenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +42,6 @@
 		30D8B52325498E800064EBAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30D8B52625498E800064EBAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		30D8B52825498E800064EBAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B2C3E1B03A9B936F0FBB3D0 /* Pods-PokedexChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokedexChallenge.debug.xcconfig"; path = "Target Support Files/Pods-PokedexChallenge/Pods-PokedexChallenge.debug.xcconfig"; sourceTree = "<group>"; };
-		98CA2FBF54551F33399BCCDA /* Pods-PokedexChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokedexChallenge.release.xcconfig"; path = "Target Support Files/Pods-PokedexChallenge/Pods-PokedexChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		A8A599663B8610E808855D3F /* Pods_PokedexChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokedexChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -51,22 +50,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0A906A208D96B09699852D0 /* Pods_PokedexChallenge.framework in Frameworks */,
+				30604AD82C45FC5400457644 /* Alamofire in Frameworks */,
+				30604ADA2C45FC5400457644 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		28E2D9BD62DB46A8F630D986 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7B2C3E1B03A9B936F0FBB3D0 /* Pods-PokedexChallenge.debug.xcconfig */,
-				98CA2FBF54551F33399BCCDA /* Pods-PokedexChallenge.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		30C61AB927D7F35D00DED5BD /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +80,6 @@
 			children = (
 				30D8B51E25498E7E0064EBAB /* PokedexChallenge */,
 				30D8B51D25498E7E0064EBAB /* Products */,
-				28E2D9BD62DB46A8F630D986 /* Pods */,
 				41DA7A6917FB20B5588BA0B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -178,17 +168,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30D8B52B25498E800064EBAB /* Build configuration list for PBXNativeTarget "PokedexChallenge" */;
 			buildPhases = (
-				0AA04F7746F394459F644E72 /* [CP] Check Pods Manifest.lock */,
 				30D8B51825498E7E0064EBAB /* Sources */,
 				30D8B51925498E7E0064EBAB /* Frameworks */,
 				30D8B51A25498E7E0064EBAB /* Resources */,
-				B2EE1442F0637B6060B56B81 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = PokedexChallenge;
+			packageProductDependencies = (
+				30604AD72C45FC5400457644 /* Alamofire */,
+				30604AD92C45FC5400457644 /* AlamofireDynamic */,
+			);
 			productName = PokedexChallenge;
 			productReference = 30D8B51C25498E7E0064EBAB /* PokedexChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -216,6 +208,9 @@
 				Base,
 			);
 			mainGroup = 30D8B51325498E7E0064EBAB;
+			packageReferences = (
+				30604AD62C45FC5400457644 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 30D8B51D25498E7E0064EBAB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,48 +232,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0AA04F7746F394459F644E72 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PokedexChallenge-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B2EE1442F0637B6060B56B81 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PokedexChallenge/Pods-PokedexChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PokedexChallenge/Pods-PokedexChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PokedexChallenge/Pods-PokedexChallenge-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		30D8B51825498E7E0064EBAB /* Sources */ = {
@@ -420,12 +373,11 @@
 		};
 		30D8B52C25498E800064EBAB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B2C3E1B03A9B936F0FBB3D0 /* Pods-PokedexChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"PokedexChallenge/";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 34KZBHS44B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PokedexChallenge/Info.plist;
@@ -443,12 +395,11 @@
 		};
 		30D8B52D25498E800064EBAB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98CA2FBF54551F33399BCCDA /* Pods-PokedexChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"PokedexChallenge/\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 34KZBHS44B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = PokedexChallenge/Info.plist;
@@ -486,6 +437,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		30604AD62C45FC5400457644 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		30604AD72C45FC5400457644 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30604AD62C45FC5400457644 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		30604AD92C45FC5400457644 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30604AD62C45FC5400457644 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 30D8B51425498E7E0064EBAB /* Project object */;
 }
