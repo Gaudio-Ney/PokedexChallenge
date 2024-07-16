@@ -1,13 +1,4 @@
-//
-//  Constants.swift
-//  PokedexChallenge
-//
-//  Created by Gáudio Ney on 08/03/22.
-//
-
-import Foundation
-
-class Constants {
+final class Constants {
     
     // MARK: - Network Constants
     enum ProductionServer {

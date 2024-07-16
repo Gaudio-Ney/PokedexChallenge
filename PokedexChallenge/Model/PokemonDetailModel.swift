@@ -1,10 +1,3 @@
-//
-//  PokemonDetail.swift
-//  PokedexChallenge
-//
-//  Created by Gáudio Ney on 13/12/23.
-//
-
 import Foundation
 
 // MARK: - PokemonDetailModel

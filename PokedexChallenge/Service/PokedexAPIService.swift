@@ -1,13 +1,6 @@
-//
-//  PokedexAPIService.swift
-//  PokedexChallenge
-//
-//  Created by Gáudio Ney on 08/03/22.
-//
-
 import Foundation
 
-class PokedexAPIService {
+final class PokedexAPIService {
     
     // MARK: - Properties
     

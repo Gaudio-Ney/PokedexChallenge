@@ -1,10 +1,3 @@
-//
-//  PokemonModel.swift
-//  PokedexChallenge
-//
-//  Created by Gáudio Ney on 14/11/20.
-//
-
 import Foundation
 
 struct PokemonAPIResponse: Codable {

@@ -1,10 +1,3 @@
-//
-//  PokemonView.swift
-//  PokedexChallenge
-//
-//  Created by Gáudio Ney on 14/11/20.
-//
-
 import SwiftUI
 
 struct PokemonView: View {

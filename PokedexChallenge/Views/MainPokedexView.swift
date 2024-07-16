@@ -1,10 +1,3 @@
-//
-//  MainPokedexView.swift
-//  PokedexChallenge
-//
-//  Created by Gáudio Ney on 28/10/20.
-//
-
 import SwiftUI
 
 struct MainPokedexView: View {
