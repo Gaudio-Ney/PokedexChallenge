@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		3024301625607F0E0091AA31 /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3024301525607F0E0091AA31 /* PokemonModel.swift */; };
 		302430192560835A0091AA31 /* PokemonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302430182560835A0091AA31 /* PokemonView.swift */; };
-		30604AD82C45FC5400457644 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 30604AD72C45FC5400457644 /* Alamofire */; };
-		30604ADA2C45FC5400457644 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 30604AD92C45FC5400457644 /* AlamofireDynamic */; };
 		30B751AB2B29F2B800C1E566 /* PokemonDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B751AA2B29F2B800C1E566 /* PokemonDetailModel.swift */; };
 		30B751AD2B29FBE000C1E566 /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B751AC2B29FBE000C1E566 /* PokemonDetailView.swift */; };
 		30B751AF2B2A045200C1E566 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B751AE2B2A045200C1E566 /* Colors.swift */; };
@@ -48,8 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30604AD82C45FC5400457644 /* Alamofire in Frameworks */,
-				30604ADA2C45FC5400457644 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,8 +171,6 @@
 			);
 			name = PokedexChallenge;
 			packageProductDependencies = (
-				30604AD72C45FC5400457644 /* Alamofire */,
-				30604AD92C45FC5400457644 /* AlamofireDynamic */,
 			);
 			productName = PokedexChallenge;
 			productReference = 30D8B51C25498E7E0064EBAB /* PokedexChallenge.app */;
@@ -444,19 +438,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		30604AD72C45FC5400457644 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 30604AD62C45FC5400457644 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		30604AD92C45FC5400457644 /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 30604AD62C45FC5400457644 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 30D8B51425498E7E0064EBAB /* Project object */;
 }
